@@ -60,7 +60,7 @@ class App extends React.Component {
                             <div className='row'>
                                 <div className='col-xs-5 title-container'>
                                     <Title className='itle-container__title' />
-                                </div>
+                                
                                 <div className='col-xs-7 form-container'>
                                     <Form getWeather={this.getWeather} />
                                     <Weather
@@ -76,6 +76,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         )
     }
