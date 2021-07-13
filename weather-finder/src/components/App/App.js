@@ -29,7 +29,6 @@ class App extends React.Component {
 
 
         if (city && country) {
-            console.log(data)
             this.setState({
                 temperature: data.main.temp,
                 city: data.name,
@@ -49,19 +48,18 @@ class App extends React.Component {
                 error: 'Please enter the values.'
             })
         }
-
     }
     render() {
         return (
             <div>
                 <div className='wrapper'>
                     <div className='main'>
-                        <div className='container'>
+                        <div className='container-fluid'>
                             <div className='row'>
-                                <div className='col-xs-5 title-container'>
+                                <div className='col-md-5 title-container'>
                                     <Title className='itle-container__title' />
-                                
-                                <div className='col-xs-7 form-container'>
+                                </div>
+                                <div className='col-md-7 form-container'>
                                     <Form getWeather={this.getWeather} />
                                     <Weather
                                         temperature={this.state.temperature}
@@ -76,7 +74,6 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         )
     }
